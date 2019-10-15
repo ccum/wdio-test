@@ -1,0 +1,49 @@
+
+Execution of 1 spec files started at 2019-10-15T23:01:27.259Z
+
+2019-10-15T23:01:27.280Z INFO @wdio/cli:launcher: Run onPrepare hook
+Starting ChromeDriver 77.0.3865.40 (f484704e052e0b556f8030b65b953dce96503217-refs/branch-heads/3865@{#442}) on port 4444
+Only local connections are allowed.
+Please protect ports used by ChromeDriver and related test frameworks to prevent access by malicious code.
+2019-10-15T23:01:27.294Z INFO @wdio/local-runner: Start worker 0-0 with arg: wdio.conf.js
+[0-0] RUNNING in chrome - /features/check-title.feature
+[0-0] 2019-10-15T23:01:27.674Z INFO @wdio/local-runner: Run worker command: run
+[0-0] 2019-10-15T23:01:27.707Z INFO webdriverio: Initiate new session using the webdriver protocol
+[0-0] 2019-10-15T23:01:27.711Z INFO webdriver: [POST] http://127.0.0.1:4444/wd/hub/session
+[0-0] 2019-10-15T23:01:27.711Z INFO webdriver: DATA { capabilities: { alwaysMatch: { browserName: 'chrome' }, firstMatch: [ {} ] },
+  desiredCapabilities: { browserName: 'chrome' } }
+[0-0] Error in "Check title from google: Get the title of webpage: Given I go to the website "http://www.google.com""
+Step "Given I go to the website "http://www.google.com"" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+[0-0] Error in "Check title from google: Get the title of webpage: Then I expect the title of the page "Google""
+Step "Then I expect the title of the page "Google"" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+[0-0] 2019-10-15T23:01:28.883Z INFO webdriver: COMMAND deleteSession()
+[0-0] 2019-10-15T23:01:28.884Z INFO webdriver: [DELETE] http://127.0.0.1:4444/wd/hub/session/5a24aae1e49427c588224162f2d4941a
+[0-0] FAILED in chrome - /features/check-title.feature
+2019-10-15T23:01:29.054Z INFO @wdio/cli:launcher: Run onComplete hook
+
+ "spec" Reporter:
+------------------------------------------------------------------
+[chrome  linux #0-0] Spec: /home/cesarcueva/Documents/projects/bbva/cotiza-cells/wdio-test/features/check-title.feature
+[chrome  linux #0-0] Running: chrome on linux
+[chrome  linux #0-0]
+[chrome  linux #0-0] Check title from google
+[chrome  linux #0-0]     Get the title of webpage
+[chrome  linux #0-0]        ✖ Given I go to the website "http://www.google.com"
+[chrome  linux #0-0]        ✖ Then I expect the title of the page "Google"
+[chrome  linux #0-0]
+[chrome  linux #0-0] 2 failing (138ms)
+[chrome  linux #0-0]
+[chrome  linux #0-0] 1) Get the title of webpage Given I go to the website "http://www.google.com"
+[chrome  linux #0-0] Step "Given I go to the website "http://www.google.com"" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+[chrome  linux #0-0] undefined:undefined
+[chrome  linux #0-0]
+[chrome  linux #0-0] 2) Get the title of webpage Then I expect the title of the page "Google"
+[chrome  linux #0-0] Step "Then I expect the title of the page "Google"" is not defined. You can ignore this error by setting cucumberOpts.ignoreUndefinedDefinitions as true.
+[chrome  linux #0-0] undefined:undefined
+
+
+Spec Files:	 0 passed, 1 failed, 1 total (100% completed) in 00:00:01 
+
+2019-10-15T23:01:29.056Z INFO @wdio/local-runner: Shutting down spawned worker
+2019-10-15T23:01:29.308Z INFO @wdio/local-runner: Waiting for 0 to shut down gracefully
+2019-10-15T23:01:29.309Z INFO @wdio/local-runner: shutting down

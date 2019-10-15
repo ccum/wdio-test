@@ -1,0 +1,9 @@
+node_modules
+lib
+logs
+reports
+allure-results
+build
+.env
+.scannerwork
+package-lock.json
