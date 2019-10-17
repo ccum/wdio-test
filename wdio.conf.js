@@ -123,13 +123,26 @@ exports.config = {
     // Test reporter for stdout.
     // The only one supported by default is 'dot'
     // see also: https://webdriver.io/docs/dot-reporter.html
-    reporters: ['spec'],
+    reporters: [
+        'dot',
+        'spec',
+        [
+            'allure',
+            {
+                outputDir: './test-report/allure-result/',
+                disableWebdriverStepsReporting: false,
+                disableWebdriverScreenshotsReporting: false,
+            },
+        ],
+        ['timeline', { outputDir: './test-report/timeline' }],
+    ],
  //
     // If you are using Cucumber you need to specify the location of your step definitions.
     cucumberOpts: {
+        requireModule: ['@babel/register'],
         require: ['./features/step-definitions/*.*js'],        // <string[]> (file/dir) require files before executing features
         backtrace: false,   // <boolean> show full backtrace for errors
-        requireModule: [],  // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
+        //requireModule: [],  // <string[]> ("extension:module") require files with the given EXTENSION after requiring MODULE (repeatable)
         dryRun: false,      // <boolean> invoke formatters without executing steps
         failFast: false,    // <boolean> abort the run on first failure
         format: ['pretty'], // <string[]> (type[:path]) specify the output format, optionally supply PATH to redirect formatter output (repeatable)
@@ -173,8 +186,9 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
+    before: function (capabilities, specs) {
+        browser.setWindowSize(1920, 1080);
+    },
     /**
      * Runs before a WebdriverIO command gets executed.
      * @param {String} commandName hook command name

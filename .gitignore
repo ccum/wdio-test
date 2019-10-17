@@ -6,4 +6,6 @@ allure-results
 build
 .env
 .scannerwork
+package-lock.jso
+test-report
 package-lock.json
