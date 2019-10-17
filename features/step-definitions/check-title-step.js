@@ -3,12 +3,16 @@
 const assert = require('assert')
 const { Given, Then } = require('cucumber')
 
-Given('I go to the website', function () {
-    browser.url('https://www.google.com/');
+Given('I go to the website', async function () {
+  await browser.url('https://www.google.com/').then(function(){
+      browser.pause(5000);
+    });
 });
 
-Then('I expect the title of the page', function () {
-  browser.pause(10000);
-  assert.equal(browser.getTitle(), "Google")
+Then('I expect the title of the page', async function () {
+  await browser.pause(1000).then(function(){
+    console.log("hola")
+  })
+  assert.equal(await browser.getTitle(), "Google")
  
 });
