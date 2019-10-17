@@ -17,6 +17,7 @@
     "@babel/register": "^7.4.4",
     "@types/cucumber": "^4.0.5",
     "@types/node": "^12.0.12",
+    "@types/webdriverio": "^4",
     "@wdio/allure-reporter": "^5.11.0",
     "@wdio/cucumber-framework": "^5.11.0",
     "@wdio/dot-reporter": "^5.11.0",
@@ -32,8 +33,7 @@
     "husky": "^3.0.1",
     "prettier": "^1.18.2",
     "selenium-standalone": "^6.16.0",
-    "wdio-timeline-reporter": "^5.0.10",
-    "webdriverio": "^5.11.0"
+    "wdio-timeline-reporter": "^5.0.10"
   },
   "devDependencies": {
     "@wdio/cli": "^5.15.1",

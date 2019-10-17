@@ -187,7 +187,7 @@ exports.config = {
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
     before: function (capabilities, specs) {
-        browser.setWindowSize(1920, 1080);
+        //browser.setWindowSize(1920, 1080);
     },
     /**
      * Runs before a WebdriverIO command gets executed.
